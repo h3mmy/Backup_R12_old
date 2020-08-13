@@ -1,0 +1,30 @@
+---
+Definitions:
+- V is the set of all vertices in the graph &tag=HI_modified
+- E is the set of all edges in the graph &tag=HI_modified
+- n will be an optimized quantifier &tag=CONTEXT_DEPENDENT &tag=Evolver
+- CandL is the set of Vertices where starting the lookup is most optimal. &tag=Evolver
+- The overall data_graph is going to look like a radix tree with multiple starting nodes. This allows for parallelism and efficiency
+- Effectively you should be able to 'poke' the mesh anywhere and have it wobble exactly where you want. 
+- Keep in mind Security protocols for operations
+- Retroactive±Persistent Data in Structure.
+---
+
+---
+Starter_Nodes = {Vs | Vs <- V, Vs <- takeWhile (<n) CandL} 
+V = [V_1..V_n]
+E = [e_1..e_n]
+
+
+
+---
+
+---
+
+- Edges are directed. They will contain an operation to be performed from the first vertex to the second to fold into the representation of the second vertex (which would thus require only cache space as needed [lazy])
+- Retroactivity will cause the 'ripple' effect so security measures should be implemented for any inserts or destroys.
+- The 'versioning' that will happen due to persistence shall be used as archives and the dependencies remain intact. 
+- The virtual mirror of a retroactive data structure and a persistent one will effectively ensure that the ripple effect, if exploited, and then scrubbed, can be reversed due to the fork in the persistent system (version forking to 'handle time') by simply removing it, and/or mapping that removal to the retroactive structure. The retroactive structure can also be auto-reconstructed if a lot of damage was done. 
+- As a contingency for the contingency, a glacial log shall be maintained to simply record the order of 'ripply-forky' operations performed. 
+
+---

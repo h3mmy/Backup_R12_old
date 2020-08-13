@@ -1,0 +1,8 @@
+---
+Ask: &id_ask
+ - USD: 45.90  
+Bid: &id_bid
+ - USD: 45.50
+Spread: *id_ask - *id_bid
+...
+
